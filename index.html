@@ -1,231 +1,301 @@
 <!doctype html>
 <html lang="vi" class="h-full">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV | Lư Huy Thông</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Lư Huy Thông</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-  <style>
-    body { box-sizing: border-box; }
-    .font-heading { font-family: 'Playfair Display', serif; }
-    .font-body { font-family: 'Quicksand', sans-serif; }
+    <style>
+        body {
+            box-sizing: border-box;
+        }
 
-    /* ===== BACKGROUND BLOBS ===== */
-    .gradient-blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: .6;
-      animation: float 8s ease-in-out infinite;
-    }
-    .blob-1 { width:300px;height:300px;top:-50px;right:-50px;background:#8b5cf6; }
-    .blob-2 { width:250px;height:250px;bottom:100px;left:-80px;background:#3b82f6; }
-    .blob-3 { width:200px;height:200px;bottom:-50px;right:20%;background:#ec4899; }
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
+        .font-body {
+            font-family: 'Quicksand', sans-serif;
+        }
 
-    /* ===== AVATAR ===== */
-    .avatar-ring {
-      background: conic-gradient(#22c55e,#3b82f6,#8b5cf6,#ec4899,#22c55e);
-      padding: 6px;
-      border-radius: 9999px;
-    }
-    .avatar-img {
-      width: 240px;
-      height: 240px;
-      border-radius: 9999px;
-      object-fit: cover;
-      background: #1e293b;
-    }
-    @media (min-width:640px){
-      .avatar-img { width:260px;height:260px; }
-    }
+        /* ===== BACKGROUND BLOBS ===== */
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .6;
+            animation: float 8s ease-in-out infinite;
+        }
 
-    /* ===== CARD ===== */
-    .card-hover {
-      transition: all .35s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-6px);
-    }
+        .blob-1 {
+            width: 300px;
+            height: 300px;
+            top: -50px;
+            right: -50px;
+            background: #8b5cf6;
+        }
 
-    /* ===== NAV ===== */
-    .nav-link {
-      position: relative;
-      transition: color .3s;
-    }
-    .nav-link:hover { color:#a78bfa; }
-    .nav-link::after {
-      content:"";
-      position:absolute;
-      left:0;bottom:-6px;
-      width:0;height:2px;
-      background:linear-gradient(90deg,#8b5cf6,#ec4899);
-      transition:width .3s;
-    }
-    .nav-link:hover::after { width:100%; }
-  </style>
+        .blob-2 {
+            width: 250px;
+            height: 250px;
+            bottom: 100px;
+            left: -80px;
+            background: #3b82f6;
+        }
+
+        .blob-3 {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            right: 20%;
+            background: #ec4899;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* ===== AVATAR ===== */
+        .avatar-ring {
+            background: conic-gradient(#22c55e,
+                    #3b82f6,
+                    #8b5cf6,
+                    #ec4899,
+                    #22c55e);
+            padding: 6px;
+            /* độ dày viền */
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 9999px;
+            object-fit: cover;
+            /* 🔥 QUAN TRỌNG */
+            object-position: center top;
+            /* chỉnh mặt cho đẹp */
+            background-color: #0f172a;
+        }
+
+        /* Responsive */
+        @media (min-width: 640px) {
+            .avatar-img {
+                width: 320px;
+                height: 320px;
+            }
+        }
+
+        /* ===== CARD ===== */
+        .card-hover {
+            transition: all .35s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+        }
+
+        /* ===== NAV ===== */
+        .nav-link {
+            position: relative;
+            transition: color .3s;
+        }
+
+        .nav-link:hover {
+            color: #a78bfa;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #8b5cf6, #ec4899);
+            transition: width .3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body class="font-body bg-slate-900 text-white">
 
-<!-- ===== HEADER NAV ===== -->
-<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-900/70 border-b border-white/10">
-  <nav class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
-    <div class="font-heading font-semibold">Lư Huy Thông</div>
-    <button id="menu-toggle" class="md:hidden text-slate-300 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-    <ul id="nav-menu" class="hidden md:flex gap-6 text-sm text-slate-300 absolute md:static top-16 md:top-0 left-0 md:left-auto right-0 md:right-auto w-full md:w-auto bg-slate-900 md:bg-transparent flex-col md:flex-row px-6 md:px-0 py-4 md:py-0 border-b md:border-b-0 border-white/10">
-      <li><a href="#home" class="nav-link">Trang chủ</a></li>
-      <li><a href="#about" class="nav-link">Về tôi</a></li>
-      <li><a href="#experience" class="nav-link">Kinh nghiệm</a></li>
-      <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
-      <li><a href="#contact" class="nav-link">Liên hệ</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- ===== HEADER NAV ===== -->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-900/70 border-b border-white/10">
+        <nav class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="font-heading font-semibold">Lư Huy Thông</div>
+            <button id="menu-toggle" class="md:hidden text-slate-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+            <ul id="nav-menu"
+                class="hidden md:flex gap-6 text-sm text-slate-300 absolute md:static top-16 md:top-0 left-0 md:left-auto right-0 md:right-auto w-full md:w-auto bg-slate-900 md:bg-transparent flex-col md:flex-row px-6 md:px-0 py-4 md:py-0 border-b md:border-b-0 border-white/10">
+                <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Về tôi</a></li>
+                <li><a href="#experience" class="nav-link">Kinh nghiệm</a></li>
+                <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- ===== MAIN ===== -->
-<div class="relative min-h-full overflow-hidden pt-28">
+    <!-- ===== MAIN ===== -->
+    <div class="relative min-h-full overflow-hidden pt-28">
 
-  <div class="gradient-blob blob-1"></div>
-  <div class="gradient-blob blob-2"></div>
-  <div class="gradient-blob blob-3"></div>
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-4 py-12">
+        <div class="relative z-10 max-w-4xl mx-auto px-4 py-12">
 
-    <!-- HOME -->
-    <section id="home" class="text-center mb-14">
-      <div class="flex justify-center mb-6">
-        <div class="avatar-ring">
-          <img src="htCEO.jpg" alt="Avatar" class="avatar-img">
+            <!-- HOME -->
+            <section id="home" class="text-center mb-14">
+                <div class="flex justify-center mb-6">
+                    <div class="avatar-ring">
+                        <img src="htCEO.jpg" alt="Avatar" class="avatar-img">
+                    </div>
+                </div>
+
+                <h1 class="font-heading text-4xl sm:text-5xl font-bold mb-2">
+                    Lư Huy Thông
+                </h1>
+
+                <p class="text-violet-400 text-xl">
+                    Sinh viên Công nghệ thông tin
+                </p>
+
+                <p class="mt-4 max-w-2xl mx-auto text-slate-400">
+                    Đam mê lập trình, phát triển web và xây dựng các hệ thống phần mềm hiện đại.
+                </p>
+            </section>
+
+            <!-- ABOUT -->
+            <section id="about" class="mb-10">
+                <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
+                    <h2 class="font-heading text-2xl mb-3">✨ Về tôi</h2>
+                    <p class="text-slate-300">
+                        Tôi là sinh viên CNTT, yêu thích lập trình web, có tinh thần học hỏi
+                        và mong muốn phát triển trong môi trường chuyên nghiệp.
+                    </p>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section id="experience" class="mb-10">
+                <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
+                    <h2 class="font-heading text-2xl mb-5">💼 Kinh nghiệm làm việc</h2>
+
+                    <div class="mb-5">
+                        <h3 class="font-semibold text-lg">Thực tập sinh IT</h3>
+                        <p class="text-sm italic text-slate-400">
+                            Công ty TNHH Công nghệ ABC • 02/2023 – 12/2023
+                        </p>
+                        <ul class="list-disc ml-5 mt-2 text-slate-300 text-sm">
+                            <li>Phát triển và bảo trì ứng dụng web</li>
+                            <li>Hỗ trợ xử lý lỗi hệ thống</li>
+                            <li>Làm việc nhóm theo Agile</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-lg">Hỗ trợ kỹ thuật</h3>
+                        <p class="text-sm italic text-slate-400">
+                            Công ty XYZ • 01/2022 – 05/2023
+                        </p>
+                        <ul class="list-disc ml-5 mt-2 text-slate-300 text-sm">
+                            <li>Hỗ trợ người dùng</li>
+                            <li>Xử lý sự cố kỹ thuật cơ bản</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section id="skills" class="mb-10">
+                <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
+                    <h2 class="font-heading text-2xl mb-4">🚀 Kỹ năng</h2>
+                    <ul class="text-slate-300 space-y-2">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>C / C++ / C#</li>
+                        <li>Python</li>
+                        <li>ASP.NET / WinForms</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
+                    <h2 class="font-heading text-2xl mb-4">📬 Liên hệ</h2>
+                    <p class="text-slate-300">📧 thong222550@student.nctu.edu.vn</p>
+                    <p class="text-slate-300">📱 0359 957 113</p>
+                    <p class="text-slate-300">📍 Việt Nam</p>
+                </div>
+            </section>
+
+            <footer class="text-center mt-12 text-slate-500 text-sm">
+                © 2024 • Lư Huy Thông
+            </footer>
+
         </div>
-      </div>
+    </div>
 
-      <h1 class="font-heading text-4xl sm:text-5xl font-bold mb-2">
-        Lư Huy Thông
-      </h1>
+    <!-- SMOOTH SCROLL & MOBILE MENU -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
 
-      <p class="text-violet-400 text-xl">
-        Sinh viên Công nghệ thông tin
-      </p>
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
 
-      <p class="mt-4 max-w-2xl mx-auto text-slate-400">
-        Đam mê lập trình, phát triển web và xây dựng các hệ thống phần mềm hiện đại.
-      </p>
-    </section>
+        // Close menu when link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.add('hidden');
+            });
+        });
 
-    <!-- ABOUT -->
-    <section id="about" class="mb-10">
-      <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
-        <h2 class="font-heading text-2xl mb-3">✨ Về tôi</h2>
-        <p class="text-slate-300">
-          Tôi là sinh viên CNTT, yêu thích lập trình web, có tinh thần học hỏi
-          và mong muốn phát triển trong môi trường chuyên nghiệp.
-        </p>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="mb-10">
-      <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
-        <h2 class="font-heading text-2xl mb-5">💼 Kinh nghiệm làm việc</h2>
-
-        <div class="mb-5">
-          <h3 class="font-semibold text-lg">Thực tập sinh IT</h3>
-          <p class="text-sm italic text-slate-400">
-            Công ty TNHH Công nghệ ABC • 02/2023 – 12/2023
-          </p>
-          <ul class="list-disc ml-5 mt-2 text-slate-300 text-sm">
-            <li>Phát triển và bảo trì ứng dụng web</li>
-            <li>Hỗ trợ xử lý lỗi hệ thống</li>
-            <li>Làm việc nhóm theo Agile</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="font-semibold text-lg">Hỗ trợ kỹ thuật</h3>
-          <p class="text-sm italic text-slate-400">
-            Công ty XYZ • 01/2022 – 05/2023
-          </p>
-          <ul class="list-disc ml-5 mt-2 text-slate-300 text-sm">
-            <li>Hỗ trợ người dùng</li>
-            <li>Xử lý sự cố kỹ thuật cơ bản</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="mb-10">
-      <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
-        <h2 class="font-heading text-2xl mb-4">🚀 Kỹ năng</h2>
-        <ul class="text-slate-300 space-y-2">
-          <li>HTML, CSS, JavaScript</li>
-          <li>C / C++ / C#</li>
-          <li>Python</li>
-          <li>ASP.NET / WinForms</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="card-hover bg-slate-800/80 border border-white/10 rounded-2xl p-6">
-        <h2 class="font-heading text-2xl mb-4">📬 Liên hệ</h2>
-        <p class="text-slate-300">📧 thong222550@student.nctu.edu.vn</p>
-        <p class="text-slate-300">📱 0359 957 113</p>
-        <p class="text-slate-300">📍 Việt Nam</p>
-      </div>
-    </section>
-
-    <footer class="text-center mt-12 text-slate-500 text-sm">
-      © 2024 • Lư Huy Thông
-    </footer>
-
-  </div>
-</div>
-
-<!-- SMOOTH SCROLL & MOBILE MENU -->
-<script>
-  // Mobile menu toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('hidden');
-  });
-  
-  // Close menu when link is clicked
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.add('hidden');
-    });
-  });
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      const offset = 90;
-      const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    });
-  });
-</script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                const offset = 90;
+                const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            });
+        });
+    </script>
 
 </body>
+
 </html>
